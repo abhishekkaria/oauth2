@@ -15,9 +15,10 @@ phases:
             - echo Build completed...
     post_build:
         commands:
-            - echo Pre-Build started on `date`
-            - aws s3 cp --debug ./dist/oauth2_angular s3://oauth2-web
-            - echo Pre-Build completed on `date`
+            - echo build process finished, we should uplload to S3 now
+            - cd dist/$oauth2_angular
+            - ls -la
+            - aws s3 sync . s3://oauth2-web --delete
 artifacts:
     files:
         - dist/oauth2_angular/**/*
