@@ -16,7 +16,7 @@ phases:
     post_build:
         commands:
             - echo Pre-Build started on `date`
-            - aws s3 cp --debug ./dist/oauth2_angular s3://oauth2-web/ --recursive --acl public-read
+            - aws s3 cp --debug ./dist/oauth2_angular s3://oauth2-web/ --recursive public-read
             - echo Pre-Build completed on `date`
 artifacts:
     files:
