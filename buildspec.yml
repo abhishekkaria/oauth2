@@ -21,4 +21,6 @@ phases:
             - aws s3 sync . s3://oauth2-web --delete
 artifacts:
     files:
-        - '**/*'
+    - "**/*"
+  discard-paths: no
+  base-directory: dist/oauth2_angular
