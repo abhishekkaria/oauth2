@@ -16,9 +16,9 @@ phases:
     post_build:
         commands:
             - echo build process finished, we should uplload to S3 now
-            - cd dist/oauth2_angular
+            - cd dist/$oauth2_angular
             - ls -la
             - aws s3 sync . s3://oauth2-web --delete
 artifacts:
     files:
-        - **/*
+        - '**/*'
