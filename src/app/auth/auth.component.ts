@@ -17,8 +17,8 @@ export class AuthComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.getToken().pipe(take(1)).subscribe((tokens) => {
-      if((tokens as any)?.id_token){
-        sessionStorage.setItem('id_token', (tokens as any).id_token);
+      if((tokens as any)?.access_token){
+        sessionStorage.setItem('access_token', (tokens as any).access_token);
         sessionStorage.setItem('refresh_token', (tokens as any).refresh_token);
         this.router.navigate(['/home']);
       }

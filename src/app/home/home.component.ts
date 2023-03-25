@@ -20,8 +20,10 @@ export class HomeComponent implements OnInit {
   }
 
   private getDemoInformation(){
-    const token = sessionStorage.getItem('id_token');
+    const token = sessionStorage.getItem('access_token');
     const bearerToken = `Bearer ${token}`;
+    console.log(bearerToken);
+    
     const options = {
       headers: new HttpHeaders({ 'Authorization': bearerToken }),
       responseType: 'text/plain'

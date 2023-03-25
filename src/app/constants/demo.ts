@@ -1,5 +1,8 @@
+import { environment } from "src/environments/environment";
+
+
 const demoUrl = () => {
-    return 'http://127.0.0.1:9000/demo';
+    return `${environment.demoUrl}/2`;
 }
 
 export default demoUrl;
