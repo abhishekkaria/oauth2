@@ -22,5 +22,5 @@ phases:
 artifacts:
     files:
         - "**/*"
-    discard-paths: no
-    base-directory: dist/oauth2_angular
+    discard-paths: yes
+    base-directory: dist
