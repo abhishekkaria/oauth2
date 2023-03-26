@@ -1,8 +1,8 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-const authServerUrl = "http://13.233.197.217:8080"
-const  resourceServerUrl = "http://15.206.145.162:8090"
+const authServerUrl = "http://65.0.26.70:8080"
+const  resourceServerUrl = "http://43.205.145.6:8090"
 
 // angular app url
 const redirectUrl = "http://oauth2-web.s3-website.ap-south-1.amazonaws.com"
